@@ -111,19 +111,6 @@ return {
       local actions = require("telescope.actions")
       local fb_actions = require("telescope").extensions.file_browser.actions
 
-      opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
-        wrap_results = true,
-        layout_strategy = "horizontal",
-        layout_config = { prompt_position = "bottom" },
-        sorting_strategy = "descending",
-        winblend = 0,
-        mappings = {
-          n = {},
-          i = {
-            ["<CR>"] = actions.select_tab_drop,
-          },
-        },
-      })
       opts.pickers = {
         diagnostics = {
           theme = "ivy",
